@@ -1,6 +1,5 @@
 FROM centos:latest
 RUN yum install httpd -y
-RUN yum install php -y
-CMD /usr/sbin/httpd -DFOREGROUND && /bin/bash
-COPY /root/image/ /var/www/html/
+CMD /usr/sbin/httpd -DFOREGROUND 
+COPY index.html /var/www/html/
 EXPOSE 80
